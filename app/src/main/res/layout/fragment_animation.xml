@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="56dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/animation_bump"
+        android:id="@+id/animation_bump"
+        android:layout_gravity="center_horizontal"
+        android:textSize="40dp"
+        android:paddingBottom="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/bump_wait_message1"
+        android:id="@+id/animation_wait_message"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
+
+    <ImageView
+        android:src="@drawable/animation_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/animation_image"
+        android:layout_gravity="center_horizontal"
+        android:maxWidth="500dp"
+        android:maxHeight="600dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/animation_guide_pair_1"
+        android:id="@+id/animation_guide"
+        android:gravity="center"/>
+</LinearLayout>
