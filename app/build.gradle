@@ -25,5 +25,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     compile group: 'com.google.code.gson', name: 'gson', version: '1.7.2'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.roughike:bottom-bar:1.4.0.1'
+
 }
 

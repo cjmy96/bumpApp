@@ -29,7 +29,7 @@ import java.util.Map;
  */
 public class AuthenticatorTask extends AsyncTask<Void, Void, String> {
     private static final String LOG_TAG = "AuthenticatorTask";
-    private static final String PREF_USERNAME = "username";
+    public static final String PREF_USERNAME = "username";
     private final Context mContext;
     ProgressDialog mProgressDialog;
     Map<String, String> mCredentials;
@@ -55,7 +55,30 @@ public class AuthenticatorTask extends AsyncTask<Void, Void, String> {
     }
 
     protected void onPostExecute(String resultJson) {
-        
+        if (resultJson == null) {
+            return;
+        }
+        Gson gson = new GsonBuilder().create();
+        Type type = new TypeToken<Map<String, String>>(){}.getType();
+        System.out.println(resultJson);
+        Map<String, String> jsonMap = gson.fromJson(resultJson, type);
+        if (jsonMap.get("status").equals("error")) {
+            Log.d(LOG_TAG, "Error!");
+
+        } else {
+            if (jsonMap.get("isAuthentic").equals("true")) {
+                PreferenceManager.getDefaultSharedPreferences(mContext)
+                        .edit()
+                        .putString(PREF_USERNAME, mCredentials.get("username"))
+                        .apply();
+                Intent i = new Intent(mContext, BumpActivity.class);
+                mContext.startActivity(i);
+            } else {
+
+            }
+
+        }
+        mProgressDialog.dismiss();
     }
 
 

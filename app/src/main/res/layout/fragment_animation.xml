@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:paddingTop="56dp"
     android:paddingLeft="24dp"
-    android:paddingRight="24dp">
+    android:paddingRight="24dp"
+    android:id="@+id/animation_fragment">
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,8 +32,8 @@
         android:layout_height="300dp"
         android:id="@+id/animation_image"
         android:layout_gravity="center_horizontal"
-        android:maxWidth="500dp"
-        android:maxHeight="600dp"
+        android:maxWidth="300dp"
+        android:maxHeight="300dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"/>
 

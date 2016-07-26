@@ -33,5 +33,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/fact_3"
         android:id="@+id/bump_fact"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"/>
 </LinearLayout>

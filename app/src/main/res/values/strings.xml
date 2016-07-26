@@ -52,23 +52,28 @@
     <string name="fact_4">Right after gland to gland combat, 36% of people under 35 check their social media accounts!</string>
     <string name="fact_5">You should bump even if you are untested. This way, either you or your partner will be alerted when at risk in the future...annonymously!</string>
 
-    <string name="bump_wait_message1">Your phones are swapping and handling their packets.</string>
-    <string name="bump_wait_message2">Give them a moment for the package to come!</string>
-    <string name="bump_wait_message3">It\'s coming!</string>
+    <string name="bump_wait_message1">Waiting for partner\'s package...</string>
+    <string name="bump_wait_message2">Received partner\'s package...</string>
+    <string name="bump_wait_message3">Waiting for the server\'s load...</string>
+    <string name="bump_wait_message4">In coming load!</string>
 
     <string name="animation_bump">Bump!</string>
     <string name="animation_guide_pair_1">I\'ve been tested since I last bumped with someone - what about you?</string>
 
     <!--https://thehotfix.net/forums/index.php?/topic/13560-25-safe-sex-slogans/ -->
-    <string name="status_slogan1">No glove, no love!</string>
-    <string name="status_slogan2">Don\'t be silly, protect your willy!</string>
-    <string name="status_slogan3">If you\'re not going to sack it, go home and whack it!</string>
-    <string name="status_slogan4">If you have an erection, and don\'t want an infection, you better use protection, on your genital section!</string>
-    <string name="status_slogan5">If you don’t cover when you penetrate, you’ll be left to masturbate!</string>
-    <string name="status_slogan6">If you really love her, wear a cover!</string>
+    <string name="protection_slogan_default">REMEMBER!\nNo glove, no love!</string>
+
 
     <string name="status_negative">Your bump buddy was tested negative for HIV, Syphilis, Gonorrhea, and Chlamydia!</string>
     <string name="status_positive">The status of your partner is unknown.</string>
     <string name="status_remember">So Remember!</string>
     <string name="status_no_gaurantee">This does not gaurantee no cooties! Things may have changed or there may be other cooties untested.</string>
+
+    <string name="status_alert_risk">You may be at risk of %1$s. You should abstain from sex until you get tested after %2$s.</string>
+    <string name="status_alert_safe">Sir dangles does not appear to be at immediate risk.\nWe still recommend getting tested regularily!</string>
+
+    <string name="partner_status_message_negative">Your partner has been tested negative for HIV, Syphilis, Gonorrhea and Chlamydia on</string>
+    <string name="partner_status_message_unknown">Your partner\'s status is unknown. It is even more important that both of you are protected.</string>
+
+    <string name="partner_status_warning_message">This is ONLY a test result and does NOT gaurantee partner\'s current status.\nWe highly recommend sharing with each other if you\'ve bumped since your last test.</string>
 </resources>

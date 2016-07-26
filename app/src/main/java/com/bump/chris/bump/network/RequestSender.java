@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
@@ -20,8 +21,9 @@ public abstract class RequestSender {
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("POST");
             urlConnection.setDoOutput(true);
-            urlConnection.setReadTimeout(5000 /* milliseconds */);
-            urlConnection.setConnectTimeout(5000 /* milliseconds */);
+            urlConnection.setReadTimeout(15000 /* milliseconds */);
+            urlConnection.setConnectTimeout(15000 /* milliseconds */);
+            urlConnection.connect();
             DataOutputStream outputStream = new DataOutputStream(urlConnection.getOutputStream());
             outputStream.writeBytes(urlParameters);
             outputStream.flush();
@@ -35,9 +37,6 @@ public abstract class RequestSender {
             }
             br.close();
             return responseOutput;
-        } catch (ProtocolException e) {
-            Log.d(LOG_TAG, "error");
-            e.printStackTrace();
         } catch (IOException e) {
             Log.d(LOG_TAG, "error");
             e.printStackTrace();
