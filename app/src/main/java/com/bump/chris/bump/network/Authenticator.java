@@ -32,7 +32,7 @@ public class Authenticator extends RequestSender {
             String credentialsJson = gson.toJson(mCredentials);
             String action = "login";
             String urlParameters = String.format("action=%s&contents=%s", action, credentialsJson);
-            URL url = new URL("http://192.168.1.100:8080/Bump/clientHandler");
+            URL url = new URL("http://52.160.106.132/clientHandler");
             return sendRequest(url, urlParameters);
         } catch (MalformedURLException e) {
             e.printStackTrace();

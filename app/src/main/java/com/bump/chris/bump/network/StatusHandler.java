@@ -24,7 +24,7 @@ public class StatusHandler extends RequestSender {
             String detailsJson = gson.toJson(requestDetails);
             String action = "retrieveStatus";
             String urlParameters = String.format("action=%s&contents=%s", action, detailsJson);
-            URL url = new URL("http://192.168.1.100:8080/Bump/clientHandler");
+            URL url = new URL("http://52.160.106.132/clientHandler");
             return sendRequest(url, urlParameters);
         } catch (MalformedURLException e) {
             e.printStackTrace();

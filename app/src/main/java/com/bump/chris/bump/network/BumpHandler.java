@@ -23,7 +23,7 @@ public class BumpHandler extends RequestSender {
             String detailsJson = gson.toJson(mBumpDetails);
             String action = "bump";
             String urlParameters = String.format("action=%s&contents=%s", action, detailsJson);
-            URL url = new URL("http://192.168.1.100:8080/Bump/clientHandler");
+            URL url = new URL("http://52.160.106.132/clientHandler");
             return sendRequest(url, urlParameters);
         } catch (MalformedURLException e) {
             e.printStackTrace();
