@@ -73,7 +73,7 @@
     <string name="status_alert_safe">Sir dangles does not appear to be at immediate risk.\nWe still recommend getting tested regularily!</string>
 
     <string name="partner_status_message_negative">Your partner has been tested negative for HIV, Syphilis, Gonorrhea and Chlamydia on</string>
-    <string name="partner_status_message_unknown">Your partner\'s status is unknown. It is even more important that both of you are protected.</string>
+    <string name="partner_status_message_unknown">Your partner\'s status is unknown\nHe/she is a new user, untested, or has been tested positive for an infection. It is even more important that both of you are protected.</string>
 
     <string name="partner_status_warning_message">This is ONLY a test result and does NOT gaurantee partner\'s current status.\nWe highly recommend sharing with each other if you\'ve bumped since your last test.</string>
 </resources>

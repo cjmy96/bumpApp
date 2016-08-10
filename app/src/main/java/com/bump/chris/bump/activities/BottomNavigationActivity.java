@@ -10,6 +10,7 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bump.chris.bump.R;
@@ -63,6 +64,10 @@ public abstract class BottomNavigationActivity extends AppCompatActivity {
                         startActivity(startStatusActivityIntent);
                         break;
                     case 2:
+                        Intent startGuideActivityIntent = new Intent(getContext(), GuideActivity.class);
+                        startActivity(startGuideActivityIntent);
+                        break;
+                    case 3:
                         PreferenceManager.getDefaultSharedPreferences(getContext()).edit().remove(AuthenticatorTask.PREF_USERNAME).apply();
                         Intent startSupportActivityIntent = new Intent(getContext(), LandingActivity.class);
                         startActivity(startSupportActivityIntent);
@@ -76,6 +81,11 @@ public abstract class BottomNavigationActivity extends AppCompatActivity {
             }
         });
         bottomBar.setItems(R.menu.bottom_navigation_buttons);
+
+        bottomBar.mapColorForTab(0, ContextCompat.getColor(this, R.color.colorAccent));
+        bottomBar.mapColorForTab(1, "#FF5252");
+        bottomBar.mapColorForTab(2, "#7B1FA2");
+        bottomBar.mapColorForTab(3, "#FF5252");
 
         // Set the color for the active tab. Ignored on mobile when there are more than three tabs.
         bottomBar.setActiveTabColor("#C2185B");

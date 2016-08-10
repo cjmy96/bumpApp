@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.bump.chris.bump.R;
 import com.bump.chris.bump.activities.AnimationActivity;
 import com.bump.chris.bump.activities.BumpActivity;
+import com.bump.chris.bump.activities.GuideActivity;
 
 import org.w3c.dom.Text;
 
@@ -26,6 +27,7 @@ import java.util.Random;
 public class PartnerStatusFragment extends DialogFragment {
     public final static String ARG_PARTNER_STATUS = "partnerStatus";
     public final static String ARG_TEST_DATE = "testDate";
+
     private String mPartnerStatus;
     private String mTestDate;
 
@@ -64,8 +66,8 @@ public class PartnerStatusFragment extends DialogFragment {
         DialogInterface.OnClickListener okListener = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
-                Intent intent = new Intent(getActivity(), BumpActivity.class);
+                Intent intent = new Intent(getActivity(), GuideActivity.class);
+                intent.putExtra(GuideActivity.EXTRA_IS_NEGATIVE, mPartnerStatus.equals("true"));
                 startActivity(intent);
             }
         };
