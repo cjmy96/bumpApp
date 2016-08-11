@@ -69,11 +69,12 @@
     <string name="status_remember">So Remember!</string>
     <string name="status_no_gaurantee">This does not gaurantee no cooties! Things may have changed or there may be other cooties untested.</string>
 
-    <string name="status_alert_risk">You may be at risk of %1$s. You should abstain from sex until you get tested after %2$s.</string>
+    <string name="status_alert_risk">You may be at risk of %1$s. You should be extra careful and get tested after %2$s.\nWhy the wait? If you test too early, results may be incorrect because of the window period.</string>
     <string name="status_alert_safe">Sir dangles does not appear to be at immediate risk.\nWe still recommend getting tested regularily!</string>
 
     <string name="partner_status_message_negative">Your partner has been tested negative for HIV, Syphilis, Gonorrhea and Chlamydia on</string>
-    <string name="partner_status_message_unknown">Your partner\'s status is unknown\nHe/she is a new user, untested, or has been tested positive for an infection. It is even more important that both of you are protected.</string>
+    <string name="partner_status_message_unknown">Your partner\'s status is untested or positive for an infection. It is even more important that both of you are protected.</string>
 
+    <string name="bump_permission_network_benefit">By joining this network, both you and your partner will be automatically notified when there is a risk of infection.\nYou will be keeping each other safe!</string>
     <string name="partner_status_warning_message">This is ONLY a test result and does NOT gaurantee partner\'s current status.\nWe highly recommend sharing with each other if you\'ve bumped since your last test.</string>
 </resources>

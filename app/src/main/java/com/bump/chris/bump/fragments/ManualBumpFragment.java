@@ -34,11 +34,17 @@ public class ManualBumpFragment extends DialogFragment {
 
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
                 String partnerID = mPartnerEditText.getText().toString();
+
+                Bundle bundle = new Bundle();
+                bundle.putString(EXTRA_PARTNER_USERNAME, partnerID);
+                BumpPermissionFragment bumpPermissionFragment = new BumpPermissionFragment();
+                bumpPermissionFragment.setArguments(bundle);
+                bumpPermissionFragment.show(getActivity().getSupportFragmentManager(), "Join Network?");
+                /*String partnerID = mPartnerEditText.getText().toString();
                 Intent startAnimationActivityIntent = new Intent(getActivity(), AnimationActivity.class);
                 startAnimationActivityIntent.putExtra(EXTRA_PARTNER_USERNAME, partnerID);
-                startActivity(startAnimationActivityIntent);
+                startActivity(startAnimationActivityIntent);*/
             }
         };
         return new AlertDialog.Builder(getActivity()).setTitle("Bump").setView(v).setPositiveButton(android.R.string.ok, okListener).setNegativeButton(android.R.string.cancel, null).create();
